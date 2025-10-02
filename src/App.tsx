@@ -1,7 +1,15 @@
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import { Center, MantineProvider, Stack, Title } from "@mantine/core";
 import { theme } from "./theme";
+import WordleGame from "./components/WordleGame";
 
 export default function App() {
-  return <MantineProvider theme={theme}>App</MantineProvider>;
+  return <MantineProvider defaultColorScheme='dark'>
+    <Center style={{ height: '100vh' }}>
+      <Stack>
+        {/* <Title>Wordle With Friends</Title> */}
+        <WordleGame />
+      </Stack>
+    </Center>
+  </MantineProvider>;
 }
